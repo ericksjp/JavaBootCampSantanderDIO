@@ -1,0 +1,14 @@
+A interface List é uma coleção ordenada que permite a inclusão de elementos duplicados.
+
+É um dos tipos mais utulizados
+
+Alocamento dinamico de memoria.
+
+A interface List oferece metodos uteis para adicionar, remover e substituir elementos.
+
+A classe collections fornece algoritmos uteis para manipulação de list
+
+ArrayList
+LinkedList
+Vector
+

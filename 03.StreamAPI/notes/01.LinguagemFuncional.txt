@@ -1,0 +1,7 @@
+Forma imperativa -> codigo pra carai
+
+Paradigma funcional -> .stream -> vai trazer uma variaedade de metodos que vai facilitar a manipulação das coleções
+
+List<ItemList> itemList
+
+itemlist.stream().mapToDouble(item -> item.getTotalValue()).sum();

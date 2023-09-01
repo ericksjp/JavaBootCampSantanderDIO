@@ -1,0 +1,3 @@
+Optional
+
+O objetivo da classe Optional no Java é fornecer uma abordagem mais segura e expressiva para tratar casos em que um valor pode ser ausente (nulo).

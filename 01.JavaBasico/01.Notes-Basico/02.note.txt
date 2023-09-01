@@ -1,0 +1,81 @@
+o bytecode do projeto java criado por uma ide tera a pasta chamada bin
+nessa pasta ficarão os arquivos compilados (.class, o bytecode)
+
+-> o vs code vai detectar mudanças na classe e automaticamente compilar ela
+
+---------------------------------------------------------------------------
+
+pelo terminal temos que entrar na pasta bin e executar o bytecode
+ex: java MinhaClasse
+a maquina virtual java vai executar esse bytecode no terminal
+
+--------------------------------------------------------------------------
+
+o main recebe um array de strings, com os argumentos do metodo
+
+public class App {
+
+    public static void main(String[] args) {        
+
+        String nome = args[0];
+        short idade = Short.parseShort(args[1]);
+        float altura = Float.parseFloat(args[2]);
+
+        System.out.println("Seu nome eh: " + nome);
+        System.out.println("Sua idade eh: " + idade);
+        System.out.println("Sua altura eh: " + altura);
+
+    }
+
+}
+
+ para passar esses argumentos na chamada do .class
+
+(dentro da pasta bin do projeto)
+
+-> java MinhaClasse Erick 20 1.65
+
+ output:
+
+    Seu nome eh: Erick
+    Sua idade eh: 20
+    Sua altura eh: 1.65
+
+
+--------------------------------------------------------------------------
+
+na pasta .vscode o arquivo launch.json determina como será a execução de uma ou conjunto de classes
+
+ posso definir os argumentos que eu quero passar pro main
+
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "Metodos_fab0ac10",
+            "args": [
+                "Erick",
+                "21",
+                "1.65"
+            ]
+        }
+
+ nosso programa vai ter essas informações acopladas ah ele (apenas quando for executado no vscode, pelo terminal as informações não ficarão acopladas)
+
+-> java MinhaClasse
+
+ output:
+
+    Seu nome eh: Erick
+    Sua idade eh: 20
+    Sua altura eh: 1.65
+
+----------------------------------------------------------------------------------
+
+Scanner sc = new Scanner(System.in)
+
+instanciou um objeto da classe Scanner e passo como argumento de onde esse objeto vai ler dados (do teclado)
+
+com esse objeto, vou poder usar seus metodos para ler entradas do usuario pelo teclado
+

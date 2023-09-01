@@ -1,0 +1,32 @@
+
+Quando ocorre um erro, o Java normalmente para e gera uma mensagem de erro.
+Java lançará uma exceção.
+Excesões -> fluxos não previsto na aplicação
+
+Bota o cpf aqui: 6598qsqsq
+Error: Cpf Invalida, tente novamente.
+
+-> tratamento de excessões
+
+---------------------------------------------------
+
+           |------- Throwable -------|
+           |                         |   
+       ____|                         |__
+      |                                 |
+    ERROR                  |------- Exception -------|
+(Algo fatal)               |                         |
+                           |                         |
+                     RuntimeException            IOException
+                           |                     SQLException
+                           |                     MalformedURLException
+                           |
+                   NullPointerException 
+                   NumberFormatException
+                   ClassCastException
+                   IndexOutOfBoundsException
+
+----------------------------------------------------
+
+Exception -> o java te obriga a tratar
+RuntimeException -> o java não te obriga a tratar

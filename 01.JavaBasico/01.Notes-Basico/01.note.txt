@@ -1,0 +1,19 @@
+Escopo - o ambiente em que uma var pode ser acessada
+---------------------------
+
+Java Docs
+@author 
+@version
+@since
+@param -> parametros
+@return -> retorno do metodo
+
+javadoc -encodign UTF-8 - docencoding ISO-8859-1 -d../docs src/*.java
+
+/**
+ * Estas duas estrlinhas acima
+ * é para identificar que você
+ * pretende elaborar um comentário
+ * a nível de documentação.
+ * que incrível !!!
+ */

@@ -1,0 +1,15 @@
+Java Stream: Resumidamente é uma API introduzida no Java 8 (fonte) que fornece uma maneira mais "funcional" e "expressiva" de lidar com coleções de objetos em Java. 
+
+Outra característica interessante das Java Streams é que elas seguem o paradigma de programação funcional. Isso significa que você pode encadear operações em uma coleção de objetos, criando uma cadeia de funções que serão executadas em ordem.
+
+O método collect faz parte da Stream API em Java e é usado para coletar elementos de um fluxo (stream) em uma coleção ou em algum outro tipo de objeto. Ele é frequentemente usado para transformar um fluxo em uma lista, conjunto ou mapa.
+
+O parâmetro collector é um objeto da interface Collector, que define como os elementos são acumulados e transformados em um resultado final.
+
+O Collectors.toCollection é um dos métodos estáticos da classe Collectors que cria um coletor para coletar os elementos de um fluxo em uma coleção específica. Ele permite especificar o tipo exato da coleção que você deseja usar.
+
+O Collectors.toCollection é usado dentro do método collect para criar o coletor que vai acumular os elementos em uma coleção específica.
+
+Collectors.toCollection(ArrayList::new) cria um coletor que acumula os elementos em um ArrayList. O ArrayList::new é uma referência ao construtor padrão da classe ArrayList.
+
+No geral, o método collect é uma operação poderosa que permite transformar os elementos de um fluxo em uma coleção ou em outro tipo de objeto desejado, e o Collectors.toCollection é uma ferramenta útil para especificar o tipo exato de coleção que você deseja criar durante esse processo de coleta.

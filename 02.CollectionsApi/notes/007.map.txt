@@ -1,0 +1,31 @@
+o map é como se fosse um dicionario python
+
+ele permite que vocÇe insira uma estrutura de chaves e valores
+
+Chave -> "Erick" -> Valor: 21;
+
+Ou seja, eu vou poder fazer buscas com base na chave;
+
+get("Erick") -> Return 21;
+
+-> HashMap implementa a hash table;
+-> Ela converte a chave em um valor hash e armazena esse valor numa tabela interna;
+-> A tabela interna é um array que guarda esses valores hash;
+
+Chave -> "Erick" -> Valor: 21;
+-> Chave 1353689;         TabelaHash[1353689]
+
+get("Erick")
+-> Chave 1353689 ---> com esse valor, ele vai procurar na tabela hash;
+
+O TreeMap é implementado usando uma árvore balanceada (geralmente uma árvore vermelha-preta) para armazenar as chaves. Isso resulta em algumas diferenças em relação ao HashMap:
+
+Por exemplo, se você tem um TreeMap onde as chaves são nomes de pessoas e os valores são idades correspondentes, a estrutura do TreeMap irá organizar esses pares chave-valor de acordo com a ordem alfabética dos nomes das pessoas. Isso ocorre porque a comparação padrão de strings em Java segue a ordem lexicográfica (ordem alfabética).
+
+-> Se você insere um par chave-valor com uma chave que já existe no TreeMap, o novo valor associado à chave substituirá o valor anterior associado a essa chave. Isso ocorre independentemente do comparador personalizado que você forneceu.
+
+-> da para fazer manipulações para lidar com valores duplicados, mas ha perca de desempenho na inserção, ou seja, é melhor procurar outra estrutura.
+
+HashMap -> usa Array -> acesso instantaneo ao elemento pelo indice;
+TreeMap -> usa Arvore -> busca binaria;
+

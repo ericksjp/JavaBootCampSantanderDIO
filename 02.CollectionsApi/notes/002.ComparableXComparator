@@ -1,0 +1,25 @@
+Comparable é uma interface que implementamos na nossa classe para a ordenação dos itens;
+---Interface obriga a classe a implementar seus metodos---
+
+-- fornece apenas uma única sequencia de ordenação
+-- afeta a classe original
+-- fornece o metodo compareTo -> que nos possibilidade dizer apartir de qual atributo vai se dar a ordenação
+
+public class Livro implements Comparable<Livro> {
+
+}
+
+public class Box <T extends Comparable<T>> implements Comparable<Box<T>>{}
+-> eu garanto que o meu tipo generico vai implementar o Comparaple
+-> com essa garantia eu implemento o Comparaple na minha classe;
+-> Com isso tanto a minha classe, quanto o meu tipo generico vão ter a interface
+-> Assim, eu posso ordenar pelo tipo generico;
+--------------------------------
+
+Comparator
+
+    ->  Fornece o metodo compare() para ordenar elementos
+    -> Comparator fornece multiplas sequencias de ordenação;
+    -> Não afeta a classe original;
+    -> Esta presente no java.util.
+    -> Podemos ordenar os elementos da lista do tipo Comparator usando o metodo Coleections.sort(List, Comparator);

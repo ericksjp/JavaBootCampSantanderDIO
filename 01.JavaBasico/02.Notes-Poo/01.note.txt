@@ -1,0 +1,29 @@
+
+Classe de modelo: classes que representem estrutura de dominio de aplicação, ex: Cliente, Pedido, Nota Fiscal e etc.
+
+Classe de serviço: classes que contém regras de negócio e validação do sistema
+
+Classe de repositório: classes que contém uma integraçao com banco de dados
+
+Classe de controle: classes que possuem a finalidade de disponibilizar alguma comunicação externa á nossa aplicação, tipo http web ou webservices.
+
+Classe utilitária: classe que contém recursos comuns á toda a aplicação
+
+----------------------------------------------------------------------------------
+
+package -> indica o diretorio da classe
+
+import ->  importa classes de outro diretorio
+
+-> organizar projetos em pacotes
+
+java.Sql.Date
+java.util.Date
+
+-> mesmo nome, pacotes diferentes
+
+-> Comercial: com.powersoft
+-> Governamental: gov.powersoft
+-> Código aberto: org.powersoft
+
+

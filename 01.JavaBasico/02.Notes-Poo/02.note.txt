@@ -1,0 +1,37 @@
+modificadores de acesso:
+
+private -> so a classe tem acesso
+public -> todo mundo tem acesso
+protected -> so eh visivel na mesma classe e em suas subclasses
+default -> so visivel em classes do mesmo pacote
+
+-------------------------------------------------------------------
+
+Enum é um tipo especial de classe onde os objetos são previamente criados, imutaveis e disponiveis por toda aplicação.
+
+ex: grau de escolaridade
+
+public Enum EGrauEscolaridade {
+    Analfabeto;
+    Fundamentaç;
+    Médio;
+    Superior;
+}
+
+--------------------------------------------------------------------
+
+Diagrama de classes
+Diagrama de objetos
+
+agregação -> uma classe agrega a outra
+composição -> uma classe compõe a outra
+
+1. -> associação contendo um elemento
+*. -> associação contendo uma lista
+0.1 -> associação  ou 1
+0..* -> associação  ou varios
+1..* -> 1 ou varios
+
++ -> publica
+# -> visibilidade protegida
+- -> visibilidade privada

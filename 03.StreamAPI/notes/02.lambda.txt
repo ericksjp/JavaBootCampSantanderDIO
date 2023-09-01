@@ -1,0 +1,15 @@
+Expressões lambda pormitem representar interfaces funcionais de forma mais concisa e possibilitam escrever codigo no estilo funcional
+
+As interfaces funcionais desempenham um papel crucial na programação funcional em Java, pois servem de base para o uso de expressões lambda
+
+A ideia é que o metodo seja declarado no mesmo lugar em que sera usado.
+
+Sintaxe -> argumento -> corpo
+
+Ex: Ordenação de um list de pessoas por altura
+
+pessoas.sort((p1,p2) -> Double.compare(p1.getAltura(), p2.getAltura()));
+
+ p1 e p2 são os argumentos da minha expressão
+ Double.compare -> metodo para comparar valores double;
+ .sort -> eu vou ordenar essa lista de acordo com a minha expressão lambda

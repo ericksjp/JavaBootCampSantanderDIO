@@ -1,0 +1,43 @@
+/*1. fazemos um upcasting, do tipo que vamos receber para um object
+ *2. comparamos os endereços de memoria, do objeto atual, com o do objeto recebido, se forem iguais, quer dizer que são iguais?
+ * 2. no processo de upcasting, a referência do objeto se mantém, apenas o tipo declarado da variável muda;
+ * 3. se o meu objeto for igual a nulo, quer dizer que ele não existe na memoria, e tentar acessar os atributos desse objeto daria erro de segmentação
+ * 4. O getClass() pega a instancia do objeto, então sempre a resposta do this.getClass() sera pessoa, por motivos obvios
+ * 4. Como eu fiz um upcasting pro tipo mais generico, eu preciso pegar a instancia desse objeto, para evitar de comparar um int "upcastado" com um tipo pessoa
+ * 5. Agora que eu tenho certeza que o valor recebido é do tipo pessoa, eu voud e fato transformalo num tipo pessoa usando o downcasting;
+ * 6. se o nome do meu tipo pessoa for igual, em valor, ao nome do tipo o recebido por parametro e a mesma coisa acontecer pro numero
+ * 6. true sera retornado, indicando que os objetos são iguais, caso contrario sera retornado false;
+ */
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null || this.getClass() != o.getClass())
+            return false;
+        Contato contato = (Contato) o;
+        return Objects.equals(this.nome, contato.nome) &&
+                Objects.equals(this.numero, contato.numero);
+    }
+
+----------------------------------------------------------------------------
+
+    Para cada elemento element na coleção, o método contains() chama o método equals() do elemento passando o objeto o como argumento.
+    Se o método equals() do elemento retornar true para algum elemento na coleção, isso significa que o elemento é igual ao objeto o, e o método contains() retorna true.
+    Se o método equals() do elemento retornar false para todos os elementos na coleção, isso significa que o objeto o não é igual a nenhum dos elementos, e o método contains() retorna false.
+
+ou seja, o metodo contains internamente faz um looping com todos os itens do Set passado, e usa o equals em cada iteração com o metodo passado por parametro, se em
+algum caso esse equals retornar true, o contains para e retorna true, caso contrario ele vai iterar sobre todo o set, e se nada der true ele retorna false;
+
+----------------------------------------------------------------------------
+
+O método hashCode() é usado para gerar um valor numérico que representa o objeto. 
+
+Dois objetos diferentes podem ter o mesmo valor de hash, isso é chamado de colisão de hash.
+Por outro lado, se dois objetos geram diferentes valores de hash, é garantido que eles não são iguais de acordo com o método equals(). 
+
+    Quando você chama o método contains() em uma coleção como um HashSet, o Java primeiro calcula o hash do objeto que você está procurando usando o método hashCode().
+    Com base no valor do hash, o Java sabe em qual "bucket" procurar dentro da estrutura de dados.
+    Depois, ele verifica os objetos dentro desse "bucket" usando o método equals(). Ele chama o equals() para verificar a igualdade real, pois pode haver colisões de hash, ou seja, diferentes objetos com o mesmo valor de hash.
+
+Sim, todo objeto em Java herda o método hashCode() da classe Object. A classe Object é a classe base para todas as classes em Java, então todos os objetos têm o método hashCode() disponível.

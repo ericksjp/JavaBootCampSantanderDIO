@@ -1,0 +1,31 @@
+final int number = 15;
+
+-----------------------------------------
+
+Um tipo genérico é uma classe genérica ou uma interface que é parametrizada em relação a tipos;
+
+Uma variavel de tipo pode ser qualquer tipo não primitivo.
+
+Os nomes dos parametros de tipo mais comumente usados são:
+    E - Elemento (usado extensivamente pelo Java Collections framework)
+    K - chave
+    N Numero
+    T tipo
+    V valor;
+    etc...
+
+public class boxTeste<>{ -> minha classe vai receber um tipo generico;
+
+}
+
+var box = new ArrayList<Integer>(); 
+-> estou instanciando um array list e com o <Integer> indicando que os elementos serão Inteiros
+
+. Vantagens -> Segurança de dados
+            -> Codigo mais legivel
+            -> Detecta erros mais cedo
+            -> Reutilização de Codigo
+            -> Melhor desempenho
+
+downcasting -> de cima pra baixo
+upcasting -> de baixo pra cima

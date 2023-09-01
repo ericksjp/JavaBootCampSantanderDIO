@@ -1,0 +1,33 @@
+Method reference permite fazer referencia a um metodo ou construtor de uma classe de forma funcional
+
+Para utilizado basta informar uma classe ou referencia seguida do simbolo :: e o nome do metodo sem os parenteses no final
+
+->ordenei pela altura
+pessoaPorAltura.sort(Comparator.comparingDouble(Pessoa::getAltura))
+
+ var pessoasOrdenadas = pessoas.stream() // transformando num stream
+                         .sorted(Comparator.comparingDouble(String::length)) //comparando pelo tamanho
+                         .collect(Collectors.toList()); //transformando esse stream numa lista
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,37 @@
+Qualquer interface com um SAM (Single Abstract Method) é uma Interface funcionale sua implementação pode ser tratada como expressões lambda.
+
+----------------------------------------------------------------
+Functional interface - Consumer<T>
+{ Representa uma operação que aceita um argumentodo tipo T e não retorna nenhum resultado. É utilizada principalmente para realizar acçoes, ou efeitos colaterais nos elementos do Stream sem modificar ou retornar um valor. }
+
+List<Integer> numeros = Arrays.asList(1,2,3,4,5);
+
+Consumer<Integer> imprimirNumeroPar = numero -> {
+	if (numero % 2 == 0) {
+		System.out.println(numero);
+	}
+}
+
+numeros.stream().foreach().imprimitNumeroPar();
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
